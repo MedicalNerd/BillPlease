@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img_4"
+
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+
+        android:layout_marginEnd="32dp"
+        android:hint="Enter the Amount"
+
+        app:helperText="Required"
+        app:helperTextTextColor="#ff0000"
+
+        android:inputType="numberDecimal"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Total Pax"
+        app:helperText="Required"
+        app:helperTextTextColor="#ff0000"
+
+        android:inputType="numberDecimal"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Discount(%)"
+
+        app:helperText="Required"
+        app:helperTextTextColor="#ff0000"
+
+        android:inputType="numberDecimal"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <ToggleButton
+            android:id="@+id/gst"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ToggleButton"
+            android:textOff="NO GST"
+            android:textOn="GST" />
+        <ToggleButton
+            android:id="@+id/svc"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ToggleButton"
+            android:textOff="NO SVC"
+            android:textOn="SVC" />
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/paymentopt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/cash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Cash"
+            />
+
+        <RadioButton
+            android:id="@+id/paynow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Paynow" />
+
+    </RadioGroup>
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:text="Reset"
+            />
+        <Button
+            android:id="@+id/split"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Split"
+            />
+        </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/totalbill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/eachperson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="@color/black"/>
+
+
+
+
+
+
+
+</LinearLayout>
